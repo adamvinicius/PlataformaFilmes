@@ -1,1 +1,1 @@
-#PlataformasFilmes#
+PlataformasFilmes
