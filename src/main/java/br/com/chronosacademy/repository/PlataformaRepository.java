@@ -8,6 +8,4 @@ import br.com.chronosacademy.modelo.Plataforma;
 
 public interface PlataformaRepository extends JpaRepository<Plataforma, Long>{
 	List<Plataforma> findByNome(String nome);
-
-	
 }

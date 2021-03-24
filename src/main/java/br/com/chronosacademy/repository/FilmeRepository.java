@@ -8,5 +8,5 @@ import br.com.chronosacademy.modelo.Filme;
 
 
 public interface FilmeRepository extends JpaRepository<Filme, Long> {
-	List<Filme> findByNome(String nome);
+	List<Filme>  findByNome(String nome);
 }
