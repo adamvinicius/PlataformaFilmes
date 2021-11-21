@@ -12,8 +12,7 @@
 	<groupId>br.com.chronosacademy</groupId>
 	<artifactId>PlataformasFilmes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cadastroPFePJ</name>
-	<description>Demo project for Spring Boot</description>
+	<description>API plataformaFilmes ChronosAcademy</description>
 
 	<properties>
 		<java.version>8</java.version>
