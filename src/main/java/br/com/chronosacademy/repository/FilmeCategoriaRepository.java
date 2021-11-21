@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.chronosacademy.model.FilmeCategoria;
 
-public interface FilmeCateogiraRepository extends JpaRepository<FilmeCategoria, Long>{
+public interface FilmeCategoriaRepository extends JpaRepository<FilmeCategoria, Long>{
 
 }

@@ -12,7 +12,6 @@ INSERT INTO FILME(descricao, duracao, nome) VALUES('Com seu suprimento de ar dim
 
 INSERT INTO FILME(descricao, duracao, nome) VALUES('Um homem que adora todas as coisas diabólicas, o supervilão Gru traça um plano para roubar a lua. Rodeado de um exército de pequenos ajudantes e seu arsenal de armas e máquinas de guerra, Gru se prepara para destruir quem atravessar seu caminho.', 1.35, 'Meu Malvado Favorito');
 
-
 INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(1,1);
 INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(2,1);
 INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(3,2);
