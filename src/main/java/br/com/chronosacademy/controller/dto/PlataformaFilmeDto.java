@@ -1,6 +1,6 @@
 package br.com.chronosacademy.controller.dto;
 
-import br.com.chronosacademy.modelo.Plataforma;
+import br.com.chronosacademy.model.Plataforma;
 
 public class PlataformaFilmeDto {
 

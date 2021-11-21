@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import br.com.chronosacademy.modelo.Plataforma;
+import br.com.chronosacademy.model.Plataforma;
 
 public class PlataformaForm {
 	@NotNull @NotEmpty @Length(min = 3) 

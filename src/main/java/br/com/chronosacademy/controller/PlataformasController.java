@@ -9,7 +9,6 @@ import javax.transaction.Transactional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +25,7 @@ import br.com.chronosacademy.config.validacao.ErroDeFormularioDto;
 import br.com.chronosacademy.controller.dto.PlataformaDto;
 import br.com.chronosacademy.controller.form.AtualizacaoPlataformaForm;
 import br.com.chronosacademy.controller.form.PlataformaForm;
-import br.com.chronosacademy.modelo.Plataforma;
+import br.com.chronosacademy.model.Plataforma;
 import br.com.chronosacademy.repository.PlataformaRepository;
 
 @RestController

@@ -1,4 +1,4 @@
-package br.com.chronosacademy.modelo;
+package br.com.chronosacademy.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,23 +6,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-
 @Entity
-public class FilmeCategoria {
+public class FilmePlataforma {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@ManyToOne
 	private Filme filme;
 	@ManyToOne
-	private Categoria categoria;
+	private Plataforma plataforma;
 	
-	public FilmeCategoria() {
+	
+	public FilmePlataforma() {
 	}
 	
-	public FilmeCategoria(Filme filme, Categoria categoria) {
+	public FilmePlataforma(Filme filme, Plataforma plataforma) {
 		this.filme = filme;
-		this.categoria = categoria;
+		this.plataforma = plataforma;
 	}
 	
 	@Override
@@ -40,7 +40,7 @@ public class FilmeCategoria {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FilmeCategoria other = (FilmeCategoria) obj;
+		FilmePlataforma other = (FilmePlataforma) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -60,11 +60,11 @@ public class FilmeCategoria {
 	public void setFilme(Filme filme) {
 		this.filme = filme;
 	}
-	public Categoria getCategoria() {
-		return categoria;
+	public Plataforma getPlataforma() {
+		return plataforma;
 	}
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public void setPlataforma(Plataforma plataforma) {
+		this.plataforma = plataforma;
 	}
 	
 	

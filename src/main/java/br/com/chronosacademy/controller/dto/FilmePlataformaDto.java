@@ -3,10 +3,10 @@ package br.com.chronosacademy.controller.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.chronosacademy.modelo.Categoria;
-import br.com.chronosacademy.modelo.Filme;
-import br.com.chronosacademy.modelo.FilmeCategoria;
-import br.com.chronosacademy.modelo.FilmePlataforma;
+import br.com.chronosacademy.model.Categoria;
+import br.com.chronosacademy.model.Filme;
+import br.com.chronosacademy.model.FilmeCategoria;
+import br.com.chronosacademy.model.FilmePlataforma;
 
 
 public class FilmePlataformaDto {

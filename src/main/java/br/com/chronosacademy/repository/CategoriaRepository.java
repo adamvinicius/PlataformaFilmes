@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.chronosacademy.modelo.Categoria;
+import br.com.chronosacademy.model.Categoria;
 
 public interface CategoriaRepository extends JpaRepository<Categoria, Long>{
 

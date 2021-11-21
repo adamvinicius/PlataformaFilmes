@@ -21,7 +21,7 @@ import br.com.chronosacademy.controller.form.LoginForm;
 @RestController
 @RequestMapping("/auth")
 public class AutenticacaoController {
-	
+
 	@Autowired
 	private AuthenticationManager authManager;
 	

@@ -1,17 +1,29 @@
-package br.com.chronosacademy.modelo;
+package br.com.chronosacademy.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 
 @Entity
-public class Curso {
+public class FilmeCategoria {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String categoria;
+	@ManyToOne
+	private Filme filme;
+	@ManyToOne
+	private Categoria categoria;
+	
+	public FilmeCategoria() {
+	}
+	
+	public FilmeCategoria(Filme filme, Categoria categoria) {
+		this.filme = filme;
+		this.categoria = categoria;
+	}
 	
 	@Override
 	public int hashCode() {
@@ -20,7 +32,6 @@ public class Curso {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -29,7 +40,7 @@ public class Curso {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Curso other = (Curso) obj;
+		FilmeCategoria other = (FilmeCategoria) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -37,29 +48,25 @@ public class Curso {
 			return false;
 		return true;
 	}
-
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getNome() {
-		return nome;
+	public Filme getFilme() {
+		return filme;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setFilme(Filme filme) {
+		this.filme = filme;
 	}
-
-	public String getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
-
-	public void setCategoria(String categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-
+	
+	
+	
 }

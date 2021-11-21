@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.chronosacademy.modelo.Filme;
+import br.com.chronosacademy.model.Filme;
 
 
 public interface FilmeRepository extends JpaRepository<Filme, Long> {

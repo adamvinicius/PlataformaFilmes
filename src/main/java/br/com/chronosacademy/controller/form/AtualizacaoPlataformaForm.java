@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import br.com.chronosacademy.modelo.Plataforma;
+import br.com.chronosacademy.model.Plataforma;
 import br.com.chronosacademy.repository.PlataformaRepository;
 
 public class AtualizacaoPlataformaForm {

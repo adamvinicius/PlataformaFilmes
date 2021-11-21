@@ -11,7 +11,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import br.com.chronosacademy.modelo.Usuario;
+import br.com.chronosacademy.model.Usuario;
 import br.com.chronosacademy.repository.UsuarioRepository;
 
 public class AutenticacaoViaTokenFilter extends OncePerRequestFilter {

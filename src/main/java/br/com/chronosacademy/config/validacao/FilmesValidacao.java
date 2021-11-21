@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.chronosacademy.controller.form.FilmeForm;
-import br.com.chronosacademy.modelo.Categoria;
-import br.com.chronosacademy.modelo.Filme;
-import br.com.chronosacademy.modelo.Plataforma;
+import br.com.chronosacademy.model.Categoria;
+import br.com.chronosacademy.model.Filme;
+import br.com.chronosacademy.model.Plataforma;
 import br.com.chronosacademy.repository.CategoriaRepository;
 import br.com.chronosacademy.repository.FilmeRepository;
 import br.com.chronosacademy.repository.PlataformaRepository;

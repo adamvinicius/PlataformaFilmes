@@ -8,11 +8,11 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
-import br.com.chronosacademy.modelo.Categoria;
-import br.com.chronosacademy.modelo.Filme;
-import br.com.chronosacademy.modelo.FilmeCategoria;
-import br.com.chronosacademy.modelo.FilmePlataforma;
-import br.com.chronosacademy.modelo.Plataforma;
+import br.com.chronosacademy.model.Categoria;
+import br.com.chronosacademy.model.Filme;
+import br.com.chronosacademy.model.FilmeCategoria;
+import br.com.chronosacademy.model.FilmePlataforma;
+import br.com.chronosacademy.model.Plataforma;
 import br.com.chronosacademy.repository.CategoriaRepository;
 import br.com.chronosacademy.repository.FilmeCateogiraRepository;
 import br.com.chronosacademy.repository.FilmePlataformaRepository;

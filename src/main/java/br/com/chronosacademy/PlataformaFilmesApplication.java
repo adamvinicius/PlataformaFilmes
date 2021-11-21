@@ -11,10 +11,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSpringDataWebSupport
 @EnableCaching
 @EnableSwagger2
-public class ForumApplication {
+public class PlataformaFilmesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ForumApplication.class, args);
+		SpringApplication.run(PlataformaFilmesApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package br.com.chronosacademy.modelo;
+package br.com.chronosacademy.model;
 
 import java.util.ArrayList;
 import java.util.Collection;

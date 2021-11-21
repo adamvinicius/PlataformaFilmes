@@ -1,7 +1,8 @@
-package br.com.chronosacademy.modelo;
+package br.com.chronosacademy.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,27 +11,28 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Filme {
+public class Plataforma {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private String nome;
+	
+	private String url;
+	
 	private String descricao;
-	private double duracao;
-	@OneToMany(mappedBy = "filme")
+	@OneToMany(mappedBy = "plataforma")
 	private List<FilmePlataforma> filmeplataforma = new ArrayList<>();
-	@OneToMany(mappedBy = "filme")
-	private List<FilmeCategoria> filmecategoria = new ArrayList<>();
 
-	public Filme() {
-
+	public Plataforma() {
 	}
 
-	public Filme(String nome, String descricao, double duracao) {
+	public Plataforma(String nome, String url, String descricao) {
 		this.nome = nome;
+		this.url = url;
 		this.descricao = descricao;
-		this.duracao = duracao;
+		
 	}
 
 	@Override
@@ -49,7 +51,7 @@ public class Filme {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Filme other = (Filme) obj;
+		Plataforma other = (Plataforma) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -74,6 +76,14 @@ public class Filme {
 		this.nome = nome;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -82,32 +92,12 @@ public class Filme {
 		this.descricao = descricao;
 	}
 
-	public double isDuracao() {
-		return duracao;
-	}
-
-	public void setDuracao(double duracao) {
-		this.duracao = duracao;
-	}
-	
-	public double getDuracao() {
-		return this.duracao;
-	}
-
 	public List<FilmePlataforma> getFilmeplataforma() {
 		return filmeplataforma;
 	}
 
 	public void setFilmeplataforma(List<FilmePlataforma> filmeplataforma) {
 		this.filmeplataforma = filmeplataforma;
-	}
-
-	public List<FilmeCategoria> getFilmecategoria() {
-		return filmecategoria;
-	}
-
-	public void setFilmecategoria(List<FilmeCategoria> filmecategoria) {
-		this.filmecategoria = filmecategoria;
 	}
 
 }
