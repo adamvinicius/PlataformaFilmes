@@ -8,6 +8,7 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
+import br.com.chronosacademy.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,15 +32,10 @@ import br.com.chronosacademy.model.Filme;
 import br.com.chronosacademy.model.FilmeCategoria;
 import br.com.chronosacademy.model.FilmePlataforma;
 import br.com.chronosacademy.model.Plataforma;
-import br.com.chronosacademy.repository.CategoriaRepository;
-import br.com.chronosacademy.repository.FilmeCateogiraRepository;
-import br.com.chronosacademy.repository.FilmePlataformaRepository;
-import br.com.chronosacademy.repository.FilmeRepository;
-import br.com.chronosacademy.repository.PlataformaRepository;
 
 @RestController
 @RequestMapping("/filmes")
-public class FilmesController {
+public class FilmesController<FilmeCateogiraRepository> {
 
 	@Autowired
 	private FilmeRepository filmeRepository;
@@ -50,7 +46,7 @@ public class FilmesController {
 	@Autowired
 	private FilmePlataformaRepository filmePlataformaRepository;
 	@Autowired
-	private FilmeCateogiraRepository filmeCategoriaRepository;
+	private FilmeCategoriaRepository filmeCategoriaRepository;
 	
 	private ErroDeFormularioDto erroDeFormularioDto;
 	private List<ErroDeFormularioDto> errosDeFormularioDto;

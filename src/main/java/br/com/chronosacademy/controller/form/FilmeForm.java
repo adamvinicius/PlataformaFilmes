@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+import br.com.chronosacademy.repository.*;
 import org.hibernate.validator.constraints.Length;
 
 import br.com.chronosacademy.model.Categoria;
@@ -13,11 +14,7 @@ import br.com.chronosacademy.model.Filme;
 import br.com.chronosacademy.model.FilmeCategoria;
 import br.com.chronosacademy.model.FilmePlataforma;
 import br.com.chronosacademy.model.Plataforma;
-import br.com.chronosacademy.repository.CategoriaRepository;
-import br.com.chronosacademy.repository.FilmeCateogiraRepository;
-import br.com.chronosacademy.repository.FilmePlataformaRepository;
-import br.com.chronosacademy.repository.FilmeRepository;
-import br.com.chronosacademy.repository.PlataformaRepository;
+
 
 public class FilmeForm {
 	@NotNull @NotEmpty @Length(min = 3)
@@ -63,9 +60,9 @@ public class FilmeForm {
 		return new Filme(nome, descricao, duracao);
 	}
 	
-	public Filme atualizar(Long id, FilmeRepository filmeRepository, 
-			CategoriaRepository categoriaRespository, PlataformaRepository plataformaRepository,
-			FilmePlataformaRepository filmeplataformaRepository, FilmeCateogiraRepository filmeCategoriaRepository) {
+	public Filme atualizar(Long id, FilmeRepository filmeRepository,
+						   CategoriaRepository categoriaRespository, PlataformaRepository plataformaRepository,
+						   FilmePlataformaRepository filmeplataformaRepository, FilmeCategoriaRepository filmeCategoriaRepository) {
 		Filme filme = filmeRepository.getOne(id);
 		
 		filme.setNome(nome);
@@ -81,7 +78,7 @@ public class FilmeForm {
 		return filme;
 	}
 	public List<FilmeCategoria> atualizaFilmeCategoria(CategoriaRepository categoriaRespository,
-			FilmeCateogiraRepository filmeCategoriaRepository, Filme filme) {
+													   FilmeCategoriaRepository filmeCategoriaRepository, Filme filme) {
 		List<FilmeCategoria> filmesCategoria = filme.getFilmecategoria();
 		for (FilmeCategoria filmeCategoria : filmesCategoria) {
 			filmeCategoriaRepository.delete(filmeCategoria);
