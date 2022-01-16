@@ -12,7 +12,7 @@ public class FilmeDto {
 	private String nome;
 	private String descricao;
 	private double duracao;
-	private List<Categoria> categorias;
+	private List<CategoriaDto> categorias;
 		
 	public FilmeDto(Filme filme) {
 		this.id = filme.getId();
@@ -21,9 +21,9 @@ public class FilmeDto {
 		this.duracao = filme.getDuracao();
 		
 		List<FilmeCategoria> filmesCategorias = filme.getFilmecategoria();
-		List<Categoria> categorias = new ArrayList<>();
+		List<CategoriaDto> categorias = new ArrayList<>();
 		for (FilmeCategoria filmeCategoria : filmesCategorias) {
-			categorias.add(filmeCategoria.getCategoria());
+			categorias.add(new CategoriaDto(filmeCategoria.getCategoria()));
 		}
 		this.categorias = categorias;
 	}
@@ -51,10 +51,10 @@ public class FilmeDto {
 	public void setDuracao(double duracao) {
 		this.duracao = duracao;
 	}
-	public List<Categoria> getCategorias() {
+	public List<CategoriaDto> getCategorias() {
 		return categorias;
 	}
-	public void setCategorias(List<Categoria> categorias) {
+	public void setCategorias(List<CategoriaDto> categorias) {
 		this.categorias = categorias;
 	}
 	
