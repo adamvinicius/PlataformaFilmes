@@ -1,16 +1,16 @@
 INSERT INTO USUARIO(nome, email, senha) VALUES('Aluno', 'aluno@email.com', '$2a$10$sFKmbxbG4ryhwPNx/l3pgOJSt.fW1z6YcUnuE2X8APA/Z3NI/oSpq');
 INSERT INTO USUARIO(nome, email, senha) VALUES('Moderador', 'moderador@email.com', '$2a$10$sFKmbxbG4ryhwPNx/l3pgOJSt.fW1z6YcUnuE2X8APA/Z3NI/oSpq');
 
-INSERT INTO PLATAFORMA(descricao, nome, url) VALUES('Netflix È uma provedora global de filmes e sÈries de televis„o via streaming sediada em Los Gatos', 'NetFlix', 'www.netflix.com');
-INSERT INTO PLATAFORMA(descricao, nome, url) VALUES('Prime Video, È um serviÁo de vÌdeo sob demanda pela Amazon disponÌvel em mais de 200 paÌses. Ele oferece programas de televis„o e filmes para aluguel ou compra', 'Prime Videos', 'www.primevideo.com');
+INSERT INTO PLATAFORMA(descricao, nome, url) VALUES('Netflix √© uma provedora global de filmes e s√©ries de televis√£o via streaming sediada em Los Gatos', 'NetFlix', 'www.netflix.com');
+INSERT INTO PLATAFORMA(descricao, nome, url) VALUES('Prime Video, √© um servi√ßo de v√≠deo sob demanda pela Amazon dispon√≠vel em mais de 200 pa√≠ses. Ele oferece programas de televis√£o e filmes para aluguel ou compra', 'Prime Videos', 'www.primevideo.com');
 
-INSERT INTO FILME(descricao, duracao, nome) VALUES('The Platform È um filme espanhol de terror e ficÁ„o cientÌfica de 2019 dirigido por Galder Gaztelu-Urrutia. O filme se passa em um grande Centro de Autogest„o Vertical em estilo torre.', 1.34, 'O PoÁo');
-INSERT INTO FILME(descricao, duracao, nome) VALUES('Frank Sheeran, O IrlandÍs, È um veterano de guerra cheio de condecoraÁıes. Ele aprendeu a matar servindo na Segunda Guerra Mundial e divide seu tempo entre os trabalhos de caminhoneiro e assassino de aluguel para a m·fia', 3.30, 'O IrlandÍs');
+INSERT INTO FILME(descricao, duracao, nome) VALUES('The Platform √© um filme espanhol de terror e fic√ß√£o cient√≠fica de 2019 dirigido por Galder Gaztelu-Urrutia. O filme se passa em um grande Centro de Autogest√£o Vertical em estilo torre.', 1.34, 'O Po√ßo');
+INSERT INTO FILME(descricao, duracao, nome) VALUES('Frank Sheeran, O Irland√™s, √© um veterano de guerra cheio de condecora√ß√µes. Ele aprendeu a matar servindo na Segunda Guerra Mundial e divide seu tempo entre os trabalhos de caminhoneiro e assassino de aluguel para a m√°fia', 3.30, 'O Irland√™s');
 
-INSERT INTO FILME(descricao, duracao, nome) VALUES('JJ È um insensÌvel agente da CIA que foi rebaixado de categorÌa e È enviado para espiar uma familia.', 1.40, 'Aprendiz de espi„');
-INSERT INTO FILME(descricao, duracao, nome) VALUES('Com seu suprimento de ar diminuindo constantemente, quatro jovens mergulhadoras precisam navegar por um labirinto subaqu·tico de cavernas claustrofÛbicas e t˙neis misteriosos para escapar de grandes tubarıes brancos.', 1.30, 'Medo Profundo: O Segundo Ataque');
+INSERT INTO FILME(descricao, duracao, nome) VALUES('JJ √© um insens√≠vel agente da CIA que foi rebaixado de categor√≠a e √© enviado para espiar uma familia.', 1.40, 'Aprendiz de espi√£');
+INSERT INTO FILME(descricao, duracao, nome) VALUES('Com seu suprimento de ar diminuindo constantemente, quatro jovens mergulhadoras precisam navegar por um labirinto subaqu√°tico de cavernas claustrof√≥bicas e t√∫neis misteriosos para escapar de grandes tubar√µes brancos.', 1.30, 'Medo Profundo: O Segundo Ataque');
 
-INSERT INTO FILME(descricao, duracao, nome) VALUES('Um homem que adora todas as coisas diabÛlicas, o supervil„o Gru traÁa um plano para roubar a lua. Rodeado de um exÈrcito de pequenos ajudantes e seu arsenal de armas e m·quinas de guerra, Gru se prepara para destruir quem atravessar seu caminho.', 1.35, 'Meu Malvado Favorito');
+INSERT INTO FILME(descricao, duracao, nome) VALUES('Um homem que adora todas as coisas diab√≥licas, o supervil√£o Gru tra√ßa um plano para roubar a lua. Rodeado de um ex√©rcito de pequenos ajudantes e seu arsenal de armas e m√°quinas de guerra, Gru se prepara para destruir quem atravessar seu caminho.', 1.35, 'Meu Malvado Favorito');
 
 INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(1,1);
 INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(2,1);
@@ -20,11 +20,11 @@ INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(5,1);
 INSERT INTO FILME_PLATAFORMA(filme_id, plataforma_id) VALUES(5,2);
 
 INSERT INTO CATEGORIA(tipo) VALUES('Aventura');
-INSERT INTO CATEGORIA(tipo) VALUES('AÁ„o');
+INSERT INTO CATEGORIA(tipo) VALUES('A√ß√£o');
 INSERT INTO CATEGORIA(tipo) VALUES('Terror');
 INSERT INTO CATEGORIA(tipo) VALUES('Drama');
-INSERT INTO CATEGORIA(tipo) VALUES('ComÈdia');
-INSERT INTO CATEGORIA(tipo) VALUES('SobrevivÍncia');
+INSERT INTO CATEGORIA(tipo) VALUES('Com√©dia');
+INSERT INTO CATEGORIA(tipo) VALUES('Sobreviv√™ncia');
 INSERT INTO CATEGORIA(tipo) VALUES('Crime');
 INSERT INTO CATEGORIA(tipo) VALUES('Thriller');
 

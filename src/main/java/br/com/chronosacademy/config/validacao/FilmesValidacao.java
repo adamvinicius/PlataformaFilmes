@@ -2,6 +2,7 @@ package br.com.chronosacademy.config.validacao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import br.com.chronosacademy.controller.form.FilmeForm;
 import br.com.chronosacademy.model.Categoria;
@@ -16,6 +17,7 @@ public class FilmesValidacao {
 	public List<ErroDeFormularioDto> validaFormFilmes(FilmeForm form, FilmeRepository filmeRepository, PlataformaRepository plataformaRepository, CategoriaRepository categoriaRepository) {
 		List<ErroDeFormularioDto> errosDeFormularioDto = new ArrayList<>();
 		Filme filme = form.converter();
+
 		errosDeFormularioDto.addAll(validaFilme(filme, filmeRepository));
 		
 		errosDeFormularioDto.addAll(validaPlataformas(form, plataformaRepository));
@@ -23,6 +25,25 @@ public class FilmesValidacao {
 		
 		return errosDeFormularioDto;
 	}
+
+	public List<ErroDeFormularioDto> validaFormFilmesAlteracao(Long id, FilmeForm form, FilmeRepository filmeRepository, PlataformaRepository plataformaRepository, CategoriaRepository categoriaRepository) {
+		List<ErroDeFormularioDto> errosDeFormularioDto = new ArrayList<>();
+		Filme filme = form.converter();
+
+		Optional<Filme> filme2 = filmeRepository.findById(id);
+
+		if (!filme.getNome().equals(filme2.get().getNome())){
+			errosDeFormularioDto.addAll(validaFilme(filme, filmeRepository));
+		}
+
+
+		errosDeFormularioDto.addAll(validaPlataformas(form, plataformaRepository));
+		errosDeFormularioDto.addAll(validaCategoria(form, categoriaRepository));
+
+		return errosDeFormularioDto;
+	}
+
+
 		
 	
 	public List<ErroDeFormularioDto> validaCategoria(FilmeForm form, CategoriaRepository categoriaRepository) {

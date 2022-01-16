@@ -101,7 +101,7 @@ public class FilmesController<FilmeCateogiraRepository> {
 		}
 		
 		FilmesValidacao filmesValidacao = new FilmesValidacao();
-		errosDeFormularioDto = filmesValidacao.validaFormFilmes(form, filmeRepository, plataformaRepository, categoriaRepository);
+		errosDeFormularioDto = filmesValidacao.validaFormFilmesAlteracao(id, form, filmeRepository, plataformaRepository, categoriaRepository);
 		if (errosDeFormularioDto.size() != 0) {
 			return ResponseEntity.badRequest().body(errosDeFormularioDto);
 		}
