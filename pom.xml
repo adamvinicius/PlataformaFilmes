@@ -91,7 +91,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<finalName>forum</finalName>
 		<plugins>
@@ -101,5 +100,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
